@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField]private Transform startPointTransform;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("GunAmmo"))
@@ -11,6 +12,13 @@ public class PlayerInteractions : MonoBehaviour
             GameManager.Instance.gunAmmo += other.gameObject.GetComponent<AmmoBox>().ammo;   
             Destroy(other.gameObject);
             
+        }
+        if (other.gameObject.CompareTag("DeathFloor"))
+        {
+
+            GameManager.Instance.LostHealt(50);
+            gameObject.transform.position = startPointTransform.position;
+
         }
     }
 }

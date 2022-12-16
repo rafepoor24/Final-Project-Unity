@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,20 @@ public class GameManager : MonoBehaviour
     {
         ammoText.text=gunAmmo.ToString();
         healthText.text=health.ToString();
+    }
+
+    public void LostHealt(int valueToLost)
+    {
+        health -= valueToLost;
+        RestarLevel();
+
+    }
+    public void RestarLevel()
+    {
+        if(health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
 

@@ -9,6 +9,9 @@ public class Granade : MonoBehaviour
     [SerializeField] private float radius = 5;
     [SerializeField] private float explosionForce = 70;
 
+    [Header("Componets")]
+    [SerializeField] private GameObject explosionPacticle;
+
 
     private float countDown;
     private bool IsExploted;
@@ -32,6 +35,7 @@ public class Granade : MonoBehaviour
 
     void Exploded()
     {
+        Instantiate(explosionPacticle,transform.position,transform.rotation);
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (var rangeObjects in colliders)
         {

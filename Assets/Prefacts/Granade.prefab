@@ -130,3 +130,4 @@ MonoBehaviour:
   delay: 3
   radius: 5
   explosionForce: 70
+  explosionPacticle: {fileID: 2317923065365289174, guid: 8e1c45b3824bea14fba3f8f1dd259533, type: 3}
