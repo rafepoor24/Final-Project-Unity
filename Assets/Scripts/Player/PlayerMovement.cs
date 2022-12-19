@@ -29,8 +29,20 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
+    [Header("SprintValues")]
+    [SerializeField] public bool isSprinting;
+    [SerializeField] private float sprintSpeedMultiplayer=1.5f;
 
+    [Header("Stamina")]
+    [SerializeField] public float useStamineAmount=5;
+    private Stamina staminaBar ;
 
+    private float sprintSpeed=1;
+
+    private void Start()
+    {
+       staminaBar= FindObjectOfType<Stamina>();
+    }
 
     void Update()
     {
@@ -47,11 +59,15 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
+        Jump();
+
+        RunCheck();
+
         xMovement = Input.GetAxis("Horizontal");
         yMovement= Input.GetAxis("Vertical");
 
         move=transform.right*xMovement+transform.forward*yMovement;
-        characterController.Move(move* speed * Time.deltaTime);
+        characterController.Move(move* speed * Time.deltaTime*sprintSpeed);
 
 
         velocity.y += gravity * Time.deltaTime; // Use the gravity for the player
@@ -61,8 +77,40 @@ public class PlayerMovement : MonoBehaviour
 
     void Jump()
     {
-      
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+
             velocity.y = Mathf.Sqrt(jumpForce * -2 * gravity);
-        
+
+        }
+
+    }
+
+    public void RunCheck()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isSprinting = !isSprinting;
+            if (isSprinting == true)
+            {
+                staminaBar.UseStamina(useStamineAmount);
+            
+
+        }
+            else
+            {
+                staminaBar.UseStamina(0);
+            }
+        }
+        if (isSprinting == true)
+        {
+            sprintSpeed = sprintSpeedMultiplayer;
+        }
+
+        else
+        {
+            sprintSpeed = 1;
+            
+        }
     }
 }
