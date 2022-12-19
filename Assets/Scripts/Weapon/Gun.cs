@@ -7,7 +7,7 @@ using UnityEngine;
 //<summary>
 //this class controlled the bullet instance 
 // </summary>
-public class Shoot : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Transform spawnPoint;
@@ -27,8 +27,10 @@ public class Shoot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if(Time.time > shootRateTime)
+            if(Time.time > shootRateTime && GameManager.Instance.gunAmmo >0)
             {
+                GameManager.Instance.gunAmmo--; 
+
                 ShootBullet();
 
                 shootRateTime = Time.time +shootRate;
