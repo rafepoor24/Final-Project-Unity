@@ -1,0 +1,16 @@
+
+def dispense_fibonnaci(sequence_number):
+  pos = int(input(sequence_number("Insertar numero:")))
+  n = 1
+  a = 0
+  b = 1
+  if pos <= 1:
+    return a
+
+  while n < pos:
+    n+=1
+    a=b
+    b=pos
+    total= a+b
+
+  return(total)
