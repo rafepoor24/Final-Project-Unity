@@ -20,7 +20,7 @@ public class WeaponSway : MonoBehaviour
    
     void Update()
     {
-        
+        Sway();
     }
 
     private void Sway()

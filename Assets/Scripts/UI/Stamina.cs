@@ -15,7 +15,7 @@ public class Stamina : MonoBehaviour
 
      private float RegenerateStaminaAmount=2;
 
-     private float LosingStaminaTime=0.1f;
+     private float LosingStaminaTime=0.3f;
 
     private Coroutine myCoroutineLosing;
     private Coroutine myCoroutineRegenerate;
