@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5559faccaadc8684ebfebcf39586c261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _FlashTime: 0.15
   enemyHealt: 100
-  ammoBox: {fileID: 7447600918640644254, guid: 2d4b18bdc55ab614d935c49be0dc4c9c, type: 3}
 --- !u!1 &4769438966676415594
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +211,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_Name
       value: PA_Warrior
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_RootOrder
@@ -267,6 +271,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
