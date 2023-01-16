@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3186897048022683807}
   - component: {fileID: 3186897048022683804}
   - component: {fileID: 3525392608098019935}
+  - component: {fileID: 5923534501308997314}
+  - component: {fileID: 1005697128604870870}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -122,7 +124,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 0.001
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &3186897048022683804
@@ -132,18 +134,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3186897048022683801}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ae1cba19add4ab4cb388e9c4b57c610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 3186897048022683807}
-  _destinations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _destinations: []
   followPlayer: 0
   _distanceFollowPlayer: 10
   _distanceFollowPathr: 1.5
@@ -162,6 +159,31 @@ MonoBehaviour:
   enemyBullet: {fileID: 5577088550494434414, guid: d6e3c66c3892dde4dab096ba45a5b75a, type: 3}
   spawnBullet: {fileID: 3525392609779464713}
   speedBullet: 100
+--- !u!114 &5923534501308997314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186897048022683801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5559faccaadc8684ebfebcf39586c261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1005697128604870870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3186897048022683801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 3.47}
+  m_Center: {x: 0, y: 0.72, z: -0.46}
 --- !u!1 &3525392609779464712
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +226,7 @@ GameObject:
   - component: {fileID: 330317294487329500}
   m_Layer: 0
   m_Name: EnemyMeleShoot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

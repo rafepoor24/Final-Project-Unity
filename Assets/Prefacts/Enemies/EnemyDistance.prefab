@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3586422207927281091}
   m_Layer: 0
   m_Name: EnemyDistance
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5714254047786759562}
   - component: {fileID: 4426922181324838220}
   - component: {fileID: 5016651464110310001}
+  - component: {fileID: 8078265554171659803}
   m_Layer: 0
   m_Name: EnemyRange
   m_TagString: Untagged
@@ -169,15 +170,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 4426922181324838220}
-  _destinations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  followPlayer: 0
+  _destinations: []
+  followPlayer: 1
   _distanceFollowPlayer: 10
   _distanceFollowPathr: 1.5
+--- !u!114 &8078265554171659803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2499860251361302322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5559faccaadc8684ebfebcf39586c261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2725581395001136377
 GameObject:
   m_ObjectHideFlags: 0

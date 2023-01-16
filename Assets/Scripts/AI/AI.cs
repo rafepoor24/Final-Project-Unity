@@ -26,22 +26,23 @@ public class AI : MonoBehaviour
     void Start()
     {
         _player = FindObjectOfType<PlayerMovement>().gameObject;
-        _navMeshAgent.destination = _destinations[0].transform.position;
+        //_navMeshAgent.destination = _destinations[0].transform.position;
     }
 
    
     void Update()
     {
-        _distancePlayer = Vector3.Distance(transform.position, _player.transform.position);
+        FollowPlayer();
+        /*_distancePlayer = Vector3.Distance(transform.position, _player.transform.position);
 
         if (_distancePlayer <= _distanceFollowPlayer && followPlayer)
         {
-            FollowPlayer();
+            
         }
         else
         {
             EnemyPath();
-        }
+        }*/
     }
     public void EnemyPath()
     {

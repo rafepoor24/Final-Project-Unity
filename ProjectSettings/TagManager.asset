@@ -8,16 +8,18 @@ TagManager:
   - GunAmmo
   - DeathFloor
   - EnemyBullet
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Weapon
   - Water
   - UI
   - Floor
   - Player
-  - 
+  - Eyes
   - 
   - 
   - 
