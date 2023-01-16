@@ -9,6 +9,7 @@ TagManager:
   - DeathFloor
   - EnemyBullet
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

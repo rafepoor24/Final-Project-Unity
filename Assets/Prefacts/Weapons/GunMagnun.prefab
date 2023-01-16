@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 5179156016188909450}
-  bullet: {fileID: 7074906519008804466, guid: 70e61187566936a49a7b1b8de3a6fa38, type: 3}
+  bullet: {fileID: 8886711912544891299, guid: 92176d0badcb2c941a36f44bf2454b7c, type: 3}
   shootForce: 1500
   shootRate: 0.5
 --- !u!1 &5179156016188909461

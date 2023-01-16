@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
         public float rate;
     }
     public Wave[] waves;
-    private int nextWave=0;
+    public int nextWave=0;
     public Transform[] spawnPoints;
 
 
@@ -64,7 +64,7 @@ void Start()
             waveCountDown-=Time.deltaTime;
         }
 
-        
+        //GameManager.Instance.nextWave(nextWave);
     }
 
     void WaveCompleted()
