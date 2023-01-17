@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sprintSpeedMultiplayer=1.5f;
 
     [Header("Stamina")]
-    [SerializeField] public float useStamineAmount=2;
+    [SerializeField] public float useStamineAmount=5;
     private Stamina staminaBar ;
 
     private float sprintSpeed=1;
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        
+        Jump();
 
         RunCheck();
 
