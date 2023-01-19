@@ -58,3 +58,16 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+ProjectSettings/URPProjectSettings.asset
+ProjectSettings/TagManager.asset
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+UserSettings/Layouts/default-2021.dwlt
+ProjectSettings/BurstAotSettings_WebGL.json
+ProjectSettings/CommonBurstAotSettings.json
+ ProjectSettings/Packages/com.unity.connect.share/
+ProjectSettings/*
+UserSettings/*
+
+
+
