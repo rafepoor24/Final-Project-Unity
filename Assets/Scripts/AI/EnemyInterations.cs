@@ -9,9 +9,10 @@ public class EnemyInterations : MonoBehaviour
     private Color _origiColor;
     public  float _FlashTime=0.15f;
     public float enemyHealt = 100;
+    [SerializeField] private GameObject explosionPacticle;
 
 
-   void Start()
+    void Start()
     {
         _meshRendere = GetComponent<MeshRenderer>();
         _origiColor = _meshRendere.material.color;
@@ -26,6 +27,7 @@ public class EnemyInterations : MonoBehaviour
         if (enemyHealt<=0f)
         {
             Die();
+            
         }
 
     }
@@ -33,6 +35,7 @@ public class EnemyInterations : MonoBehaviour
 
     void Die()
     {
+        Instantiate(explosionPacticle, transform.position, transform.rotation);
         Destroy(transform.parent.gameObject);
     }
 

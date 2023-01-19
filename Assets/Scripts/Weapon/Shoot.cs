@@ -18,9 +18,9 @@ private float shootRateTime = 0.5f;
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (Time.time > shootRateTime && GameManager.Instance.gunAmmo > 0)
+            if (Time.time > shootRateTime /*&& GameManager.Instance.gunAmmo > 0*/)
             {
-               GameManager.Instance.gunAmmo--;
+              // GameManager.Instance.gunAmmo--;
 
                 ShootBullet();
 
