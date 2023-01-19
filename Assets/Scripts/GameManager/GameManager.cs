@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField]private TextMeshProUGUI ammoText;
+    //[SerializeField]private TextMeshProUGUI ammoText;
     [SerializeField]private TextMeshProUGUI healthText;
     public static GameManager Instance { get; private set; }
 
-    public int gunAmmo = 10;
+    //public int gunAmmo = 10;
     private int health = 100;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        ammoText.text=gunAmmo.ToString();
+        //ammoText.text=gunAmmo.ToString();
         healthText.text=health.ToString();
     }
 
