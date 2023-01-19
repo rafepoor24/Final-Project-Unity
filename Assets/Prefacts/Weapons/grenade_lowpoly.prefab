@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3858919235218305892}
   - component: {fileID: 6122855630313858942}
   - component: {fileID: 3126638705828663194}
-  - component: {fileID: 7016535654509531062}
+  - component: {fileID: 9065590867996252018}
   m_Layer: 0
   m_Name: grenade_lowpoly
   m_TagString: Untagged
@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3858919235220237732}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.3580453, y: 0.63, z: 2.4960606}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   delay: 3
   radius: 5
   explosionForce: 70
-  explosionPacticle: {fileID: 5451461690399098842, guid: 86e59f162feb6214a89a55f92970f0d2, type: 3}
+  explosionPacticle: {fileID: 1157453703743244290, guid: 9ad54f6e15c14954e905ee6339382c66, type: 3}
 --- !u!54 &3126638705828663194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -118,16 +118,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &7016535654509531062
-SphereCollider:
+--- !u!136 &9065590867996252018
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3858919235220237732}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5a853f0ff235b2f4a89a325d826a45af, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.056450196
-  m_Center: {x: -0.0009902306, y: 0.056450196, z: 0.00051543314}
+  m_Radius: 0.06563282
+  m_Height: 0.1496826
+  m_Direction: 2
+  m_Center: {x: 0.018363977, y: 0.066829704, z: -0.017875684}

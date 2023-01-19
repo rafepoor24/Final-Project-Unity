@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FlashTime: 0.15
   enemyHealt: 100
+  explosionPacticle: {fileID: 100008, guid: 8f611da60097c85438a2947021f045cf, type: 3}
 --- !u!1 &4769438966676415594
 GameObject:
   m_ObjectHideFlags: 0
