@@ -342,13 +342,14 @@ GameObject:
   m_Component:
   - component: {fileID: 8439797415375500817}
   - component: {fileID: 8547166254865534519}
+  - component: {fileID: 4374036195127271689}
   m_Layer: 3
   m_Name: Rifle_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8439797415375500817
 Transform:
   m_ObjectHideFlags: 0
@@ -384,13 +385,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb69ff6b9b472a647a1414beea36a317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 25
   range: 150
   fpsCamera: {fileID: 0}
   muzzle: {fileID: 0}
   impactEffect: {fileID: 4526761118513828062, guid: 4ef9bb4d9d6e0624db0f7b86fcbbd530, type: 3}
+  impactEffectSteel: {fileID: 3942579484374428110, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
+  maxAmmo: 20
+  reloadTime: 1
+  anim: {fileID: 4374036195127271689}
+  ammoText: {fileID: 0}
   shootForce: 1500
-  shootRate: 0.8
+  shootRate: 0.2
+  currentAmmo: 0
+--- !u!95 &4374036195127271689
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445627414685792179}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a305fd29f0642054da3a77e458768845, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8445646587037747613
 GameObject:
   m_ObjectHideFlags: 0

@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5179156016017510226}
   - component: {fileID: 2324519931919862075}
+  - component: {fileID: 427700586}
   m_Layer: 3
   m_Name: GunMagnun
   m_TagString: Untagged
@@ -92,11 +93,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb69ff6b9b472a647a1414beea36a317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 10
   range: 150
   fpsCamera: {fileID: 0}
   muzzle: {fileID: 8717361520246315038}
   impactEffect: {fileID: 100002, guid: 5d73f72c6be7d0440bbc9c87d4f718c0, type: 3}
+  impactEffectSteel: {fileID: 3942579484374428110, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
+  maxAmmo: 5
+  reloadTime: 1
+  anim: {fileID: 427700586}
+  ammoText: {fileID: 0}
+  shootForce: 1500
+  shootRate: 1
+  currentAmmo: 0
+--- !u!95 &427700586
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179156016017510237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a305fd29f0642054da3a77e458768845, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5179156016188909461
 GameObject:
   m_ObjectHideFlags: 0
