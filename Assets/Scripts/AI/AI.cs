@@ -17,7 +17,7 @@ public class AI : MonoBehaviour
     private int i = 0;
     [Header("Values")]
     [SerializeField] private bool followPlayer;
-    [SerializeField]private float _distanceFollowPlayer=10;
+    //[SerializeField]private float _distanceFollowPlayer=10;
     [SerializeField]private float _distanceFollowPathr=1.5f;
 
     private GameObject _player;

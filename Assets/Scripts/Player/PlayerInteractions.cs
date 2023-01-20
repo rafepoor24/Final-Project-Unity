@@ -20,6 +20,15 @@ public class PlayerInteractions : MonoBehaviour
             gameObject.transform.position = startPointTransform.position;
 
         }
+
+        if (other.gameObject.CompareTag("HealthBox"))
+        {
+            GameManager.Instance.health +=other.gameObject.GetComponent<HealthBox>().health;
+            Destroy(other.gameObject);
+
+
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {

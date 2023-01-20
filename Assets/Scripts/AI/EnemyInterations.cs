@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class EnemyInterations : MonoBehaviour
 {
-    
+    public GameObject ammoBox;
+    public GameObject healthBox;
     private MeshRenderer _meshRendere;
     private Color _origiColor;
     public  float _FlashTime=0.15f;
@@ -14,10 +15,12 @@ public class EnemyInterations : MonoBehaviour
     public int currentHealth;
     [SerializeField] private GameObject explosionPacticle;
     public HealthBarEnemy _healthBarEnemy;
+    private int randomPowerUp;
 
 
     void Start()
     {
+        randomPowerUp = Random.Range(1, 10);
         _meshRendere = GetComponent<MeshRenderer>();
         _origiColor = _meshRendere.material.color;
         currentHealth=enemyHealt;
@@ -34,6 +37,14 @@ public class EnemyInterations : MonoBehaviour
         if (currentHealth<=0f)
         {
             Die();
+            if (randomPowerUp == 2)
+            {
+                Instantiate(ammoBox, transform.position, transform.rotation);
+            }
+            if (randomPowerUp==3)
+            {
+                Instantiate(healthBox, transform.position, transform.rotation);
+            }
             
         }
 
@@ -44,6 +55,7 @@ public class EnemyInterations : MonoBehaviour
     {
         Instantiate(explosionPacticle, transform.position, transform.rotation);
         Destroy(transform.parent.gameObject);
+        
     }
 
 

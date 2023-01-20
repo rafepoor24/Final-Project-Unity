@@ -18,7 +18,7 @@ public class ShootRayCast : MonoBehaviour
     public float reloadTime=1f;
     public Animator anim;
     [SerializeField] private TextMeshProUGUI ammoText;
-    [SerializeField] private float shootForce = 1500f;
+    //[SerializeField] private float shootForce = 1500f;
     [SerializeField] private float shootRate = 0.8f;
     private float shootRateTime = 0.5f;
     public int currentAmmo;
@@ -97,7 +97,7 @@ public class ShootRayCast : MonoBehaviour
             }
             if(!(hit.transform.name == "Player"))
             {
-                if (hit.transform.name == "Enemy")
+                if (hit.transform.name == "Enemy" || hit.transform.name == "Eyes")
                 {
                     GameObject impactGO = Instantiate(impactEffectSteel, hit.point, Quaternion.LookRotation(hit.normal));
                     Destroy(impactGO, 2f);

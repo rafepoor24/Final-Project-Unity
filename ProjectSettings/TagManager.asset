@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - Enemy
   - Bullet
+  - HealthBox
   layers:
   - Default
   - TransparentFX
