@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ShootRayCast : MonoBehaviour
 {
-    public float damage = 100f;
+    public int damage = 100;
     public float range = 150f;
     public Camera fpsCamera;
     public ParticleSystem muzzle;
@@ -18,7 +18,7 @@ public class ShootRayCast : MonoBehaviour
     public float reloadTime=1f;
     public Animator anim;
     [SerializeField] private TextMeshProUGUI ammoText;
-    [SerializeField] private float shootForce = 1500f;
+    //[SerializeField] private float shootForce = 1500f;
     [SerializeField] private float shootRate = 0.8f;
     private float shootRateTime = 0.5f;
     public int currentAmmo;
@@ -89,22 +89,26 @@ public class ShootRayCast : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
-            //Debug.Log(hit.transform.name);
+            Debug.Log(hit.transform.name);
             EnemyInterations _enemy= hit.transform.GetComponent<EnemyInterations>();
             if (_enemy !=null)
             {
                 _enemy.TakeDamage(damage);
             }
-            if (hit.transform.name=="Enemy")
+            if(!(hit.transform.name == "Player"))
             {
-                GameObject impactGO = Instantiate(impactEffectSteel, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGO, 2f);
+                if (hit.transform.name == "Enemy" || hit.transform.name == "Eyes")
+                {
+                    GameObject impactGO = Instantiate(impactEffectSteel, hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(impactGO, 2f);
+                }
+                else
+                {
+                    GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                    Destroy(impactGO, 2f);
+                }
             }
-            else
-            {
-                GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impactGO, 2f);
-            }
+            
            
         }
         

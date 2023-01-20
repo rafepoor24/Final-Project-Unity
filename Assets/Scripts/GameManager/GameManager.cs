@@ -13,7 +13,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     //public int gunAmmo = 10;
-    private int health = 100;
+    public int health = 100;
+    private int healthEnemy = 100;
+    private int wave = 0;
+    
 
     private void Awake()
     {
