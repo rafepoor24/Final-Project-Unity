@@ -3,28 +3,35 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class EnemyInterations : MonoBehaviour
 {
+    
     private MeshRenderer _meshRendere;
     private Color _origiColor;
     public  float _FlashTime=0.15f;
-    public float enemyHealt = 100;
+    public int enemyHealt = 100;
+    public int currentHealth;
     [SerializeField] private GameObject explosionPacticle;
+    public HealthBarEnemy _healthBarEnemy;
 
 
     void Start()
     {
         _meshRendere = GetComponent<MeshRenderer>();
         _origiColor = _meshRendere.material.color;
+        currentHealth=enemyHealt;
+        _healthBarEnemy.SetMaxHealth(enemyHealt);
     }
 
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(int amount)
     {
-        enemyHealt -= amount;
+        currentHealth -= amount;
+        _healthBarEnemy.SetHealth(currentHealth);
         FlashStart();
 
-        if (enemyHealt<=0f)
+        if (currentHealth<=0f)
         {
             Die();
             
