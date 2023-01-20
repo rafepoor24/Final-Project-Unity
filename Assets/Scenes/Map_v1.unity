@@ -13495,6 +13495,7 @@ GameObject:
   - component: {fileID: 969009657}
   - component: {fileID: 969009656}
   - component: {fileID: 969009658}
+  - component: {fileID: 969009659}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13562,6 +13563,18 @@ MonoBehaviour:
   - {fileID: 1251736862}
   - {fileID: 167369256}
   timeBetweenWaves: 2
+--- !u!114 &969009659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969009655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242300e2d1e28784f83b3684de885ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1010457100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20997,7 +21010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2bebbc179959e0c44936d225dcd3826b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d920a138a683e204cb85d52bb97e7d4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29320,6 +29333,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3942579484389994668, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
+      propertyPath: lengthInSec
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942579484389994668, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942579484389994668, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
 --- !u!1001 &957023346458947835
@@ -29520,6 +29545,38 @@ PrefabInstance:
     - target: {fileID: 5179156016017510237, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
       propertyPath: m_Name
       value: GunMagnun
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315024, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315024, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315026, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315026, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315034, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315034, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315036, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717361520246315036, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7737ceea4041c144d84a9acbca3b360e, type: 3}
