@@ -25,6 +25,7 @@ public class WaveSpawner : MonoBehaviour
     public float timeBetweenWaves= 5F;
     private float waveCountDown;
     private float searchCountDown =1f;
+    private bool isWaveCompleted=false;
 
     private SpawnState state = SpawnState.COUNTING;
 
@@ -35,7 +36,7 @@ void Start()
             Debug.Log("No spawnPoints referenced");
         }
         waveCountDown =timeBetweenWaves;
-
+        
     }
 
     void Update()
@@ -63,8 +64,14 @@ void Start()
         {
             waveCountDown-=Time.deltaTime;
         }
+        if (isWaveCompleted)
+        {
+            GameManager.Instance.nextWave(nextWave + 1);
+            isWaveCompleted=false;
+        }
+        
+      
 
-        //GameManager.Instance.nextWave(nextWave);
     }
 
     void WaveCompleted()
@@ -81,6 +88,7 @@ void Start()
         else
         {
             nextWave++;
+            isWaveCompleted = true;
         }
         
     }

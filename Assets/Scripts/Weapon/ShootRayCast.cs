@@ -11,6 +11,7 @@ public class ShootRayCast : MonoBehaviour
     public int damage = 100;
     public float range = 150f;
     public Camera fpsCamera;
+    
     public ParticleSystem muzzle;
     public GameObject impactEffect;
     public GameObject impactEffectSteel;
@@ -42,6 +43,7 @@ public class ShootRayCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         ammoText.text = currentAmmo.ToString();
 
         if (isRealoding)
@@ -60,10 +62,15 @@ public class ShootRayCast : MonoBehaviour
                 currentAmmo--;
               //  GameManager.Instance.gunAmmo--;
                 Shoot();
+                muzzle.Play();
                 shootRateTime = Time.time + shootRate;
+
             }
+           
+            
                
         }
+       
     }
 
     IEnumerator Reload()
@@ -82,8 +89,9 @@ public class ShootRayCast : MonoBehaviour
     void Shoot()
     {
 
-        
-        muzzle.Play();
+
+
+     
 
 
         RaycastHit hit;

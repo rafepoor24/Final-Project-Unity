@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &505463227154368707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975016790795087741}
+  m_Layer: 0
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1975016790795087741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505463227154368707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9153950360147652572}
+  m_Father: {fileID: 4712992801162814487}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4714207716865148493
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +43,7 @@ GameObject:
   - component: {fileID: 4717624035073451237}
   - component: {fileID: 4692717256184335867}
   - component: {fileID: 4700349632003168215}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_Mag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +126,7 @@ GameObject:
   - component: {fileID: 4717987853761562117}
   - component: {fileID: 4692436812124004159}
   - component: {fileID: 4700972265889048991}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +209,7 @@ GameObject:
   - component: {fileID: 4712985314585467321}
   - component: {fileID: 4692587976678935463}
   - component: {fileID: 4700175655282468873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_BeamBattery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +292,7 @@ GameObject:
   - component: {fileID: 4717920814130406905}
   - component: {fileID: 4692721227656283851}
   - component: {fileID: 4700131805954881441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_MainBattery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +375,7 @@ GameObject:
   - component: {fileID: 4712839983052131975}
   - component: {fileID: 4692654657743722301}
   - component: {fileID: 4700686114740160943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,6 +458,7 @@ GameObject:
   - component: {fileID: 4712992801162814487}
   - component: {fileID: 9124584367738731487}
   - component: {fileID: 3593733417747126214}
+  - component: {fileID: 4169408371468261790}
   m_Layer: 3
   m_Name: Heavy_08
   m_TagString: Untagged
@@ -452,6 +485,7 @@ Transform:
   - {fileID: 4717920814130406905}
   - {fileID: 4712530358674949609}
   - {fileID: 4712839983052131975}
+  - {fileID: 1975016790795087741}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -470,14 +504,13 @@ MonoBehaviour:
   damage: 25
   range: 150
   fpsCamera: {fileID: 0}
-  muzzle: {fileID: 0}
+  muzzle: {fileID: 19800002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
   impactEffect: {fileID: 4526761118513828062, guid: 4ef9bb4d9d6e0624db0f7b86fcbbd530, type: 3}
   impactEffectSteel: {fileID: 3942579484374428110, guid: 4173a36ca11eeaf4c91154b8c19d0f05, type: 3}
   maxAmmo: 25
   reloadTime: 1
   anim: {fileID: 3593733417747126214}
   ammoText: {fileID: 0}
-  shootForce: 1500
   shootRate: 0.2
   currentAmmo: 0
 --- !u!95 &3593733417747126214
@@ -500,6 +533,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4169408371468261790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714633173951368339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4639f513a042e4ea4a3fd369d7612f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swayAmount: 7
 --- !u!1 &4714691064125306135
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +557,7 @@ GameObject:
   - component: {fileID: 4718028458215207479}
   - component: {fileID: 4691707119293808735}
   - component: {fileID: 4700244914698047535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +640,7 @@ GameObject:
   - component: {fileID: 4712530358674949609}
   - component: {fileID: 4688551933071386449}
   - component: {fileID: 4700129828157385305}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: C_Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,3 +712,65 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &9153950360148047198
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1975016790795087741}
+    m_Modifications:
+    - target: {fileID: 100002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_Name
+      value: WFX_MF Spr RIFLE2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13999963
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00000029502786
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+--- !u!4 &9153950360147652572 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400002, guid: eb553b67921c92649ac7dbbc561e2047, type: 3}
+  m_PrefabInstance: {fileID: 9153950360148047198}
+  m_PrefabAsset: {fileID: 0}
